@@ -3,6 +3,14 @@
 import Link from "next/link";
 import { useState } from "react";
 
+interface NavbarProps {
+  user: {
+    name: string;
+    email: string;
+    role: string;
+  } | null;
+}
+
 const navLinks = [
   { href: "/", label: "Home" },
   { href: "/destinations", label: "Destinations" },
@@ -10,7 +18,7 @@ const navLinks = [
   { href: "/contact", label: "Contact" },
 ];
 
-export default function Navbar() {
+export default function Navbar({ user }: NavbarProps) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -32,12 +40,43 @@ export default function Navbar() {
                 {link.label}
               </Link>
             ))}
-            <Link
-              href="/contact"
-              className="rounded-full bg-primary px-5 py-2 text-sm font-semibold text-white shadow-md hover:bg-primary-dark transition-colors"
-            >
-              Book Now
-            </Link>
+
+            {user ? (
+              <div className="flex items-center gap-4">
+                <Link
+                  href="/profile"
+                  className="flex items-center gap-2 text-sm font-medium text-gray-700 hover:text-primary transition-colors"
+                >
+                  <span className="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center text-xs font-bold">
+                    {user.name.charAt(0).toUpperCase()}
+                  </span>
+                  {user.name.split(" ")[0]}
+                </Link>
+                {user.role === "admin" && (
+                  <Link
+                    href="/admin"
+                    className="text-xs font-semibold text-purple-600 hover:text-purple-800 transition-colors"
+                  >
+                    Admin
+                  </Link>
+                )}
+              </div>
+            ) : (
+              <div className="flex items-center gap-3">
+                <Link
+                  href="/signin"
+                  className="text-sm font-medium text-gray-700 hover:text-primary transition-colors"
+                >
+                  Sign In
+                </Link>
+                <Link
+                  href="/signup"
+                  className="rounded-full bg-primary px-5 py-2 text-sm font-semibold text-white shadow-md hover:bg-primary-dark transition-colors"
+                >
+                  Sign Up
+                </Link>
+              </div>
+            )}
           </div>
 
           <button
@@ -84,13 +123,44 @@ export default function Navbar() {
                 {link.label}
               </Link>
             ))}
-            <Link
-              href="/contact"
-              onClick={() => setIsOpen(false)}
-              className="block w-full text-center rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-white shadow-md hover:bg-primary-dark transition-colors"
-            >
-              Book Now
-            </Link>
+
+            {user ? (
+              <>
+                <Link
+                  href="/profile"
+                  onClick={() => setIsOpen(false)}
+                  className="block text-sm font-medium text-gray-700 hover:text-primary transition-colors py-2"
+                >
+                  My Profile
+                </Link>
+                {user.role === "admin" && (
+                  <Link
+                    href="/admin"
+                    onClick={() => setIsOpen(false)}
+                    className="block text-sm font-medium text-purple-600 hover:text-purple-800 transition-colors py-2"
+                  >
+                    Admin Dashboard
+                  </Link>
+                )}
+              </>
+            ) : (
+              <>
+                <Link
+                  href="/signin"
+                  onClick={() => setIsOpen(false)}
+                  className="block text-sm font-medium text-gray-700 hover:text-primary transition-colors py-2"
+                >
+                  Sign In
+                </Link>
+                <Link
+                  href="/signup"
+                  onClick={() => setIsOpen(false)}
+                  className="block w-full text-center rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-white shadow-md hover:bg-primary-dark transition-colors"
+                >
+                  Sign Up
+                </Link>
+              </>
+            )}
           </div>
         </div>
       )}
