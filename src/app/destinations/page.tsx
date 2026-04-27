@@ -175,7 +175,7 @@ export default function DestinationsPage() {
           <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">
             Can&apos;t Find What You&apos;re Looking For?
           </h2>
-          <p className="text-teal-100 mb-8 max-w-xl mx-auto">
+          <p className="text-blue-100 mb-8 max-w-xl mx-auto">
             We offer custom trip planning. Tell us your dream destination and
             we&apos;ll create the perfect itinerary just for you.
           </p>

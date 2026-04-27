@@ -44,7 +44,7 @@ export default function Footer() {
                   <li key={link.label}>
                     <Link
                       href={link.href}
-                      className="text-sm text-gray-400 hover:text-primary-light transition-colors"
+                      className="text-sm text-gray-400 hover:text-accent-light transition-colors"
                     >
                       {link.label}
                     </Link>
@@ -65,7 +65,7 @@ export default function Footer() {
               <a
                 key={social}
                 href="#"
-                className="text-sm text-gray-500 hover:text-primary-light transition-colors"
+                className="text-sm text-gray-500 hover:text-accent-light transition-colors"
               >
                 {social}
               </a>

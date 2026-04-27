@@ -90,12 +90,12 @@ export default function Home() {
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/60" />
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
-          <p className="text-primary-light font-semibold text-sm uppercase tracking-widest mb-4 animate-fade-in">
+          <p className="text-accent-light font-semibold text-sm uppercase tracking-widest mb-4 animate-fade-in">
             Your Adventure Awaits
           </p>
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6 animate-fade-in-up">
             Discover the World&apos;s Most{" "}
-            <span className="text-primary-light">Beautiful</span> Places
+            <span className="text-accent">Beautiful</span> Places
           </h1>
           <p className="text-lg sm:text-xl text-gray-200 max-w-2xl mx-auto mb-10 animate-fade-in-up animation-delay-200">
             From pristine beaches to majestic mountains, we craft unforgettable
@@ -104,7 +104,7 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up animation-delay-400">
             <Link
               href="/destinations"
-              className="rounded-full bg-primary px-8 py-4 text-base font-semibold text-white shadow-lg hover:bg-primary-dark hover:shadow-xl transition-all"
+              className="rounded-full bg-accent px-8 py-4 text-base font-semibold text-white shadow-lg hover:bg-accent-light hover:shadow-xl transition-all"
             >
               Explore Destinations
             </Link>
@@ -125,7 +125,7 @@ export default function Home() {
             {stats.map((stat) => (
               <div key={stat.label} className="text-center">
                 <p className="text-3xl sm:text-4xl font-bold text-white">{stat.value}</p>
-                <p className="text-sm text-teal-100 mt-1">{stat.label}</p>
+                <p className="text-sm text-blue-100 mt-1">{stat.label}</p>
               </div>
             ))}
           </div>
@@ -234,7 +234,7 @@ export default function Home() {
                 <h3 className="text-lg font-bold mb-3 text-gray-900 group-hover:text-white transition-colors">
                   {feature.title}
                 </h3>
-                <p className="text-sm text-gray-600 group-hover:text-teal-100 transition-colors leading-relaxed">
+                <p className="text-sm text-gray-600 group-hover:text-blue-100 transition-colors leading-relaxed">
                   {feature.description}
                 </p>
               </div>
@@ -289,12 +289,12 @@ export default function Home() {
           fill
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-primary-dark/90 to-primary/80" />
+        <div className="absolute inset-0 bg-gradient-to-r from-primary-dark/90 to-primary/85" />
         <div className="relative z-10 mx-auto max-w-4xl px-4 text-center">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
             Ready for Your Next Adventure?
           </h2>
-          <p className="text-lg text-teal-100 max-w-2xl mx-auto mb-10">
+          <p className="text-lg text-blue-100 max-w-2xl mx-auto mb-10">
             Join thousands of happy travelers who have discovered the world with
             Wanderlust. Your dream destination is just a click away.
           </p>

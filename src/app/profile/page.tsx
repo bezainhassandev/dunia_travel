@@ -42,7 +42,7 @@ export default async function ProfilePage() {
                 <span className={`inline-block mt-1 text-xs font-semibold px-3 py-1 rounded-full ${
                   session.role === "admin"
                     ? "bg-purple-100 text-purple-700"
-                    : "bg-teal-100 text-teal-700"
+                    : "bg-blue-100 text-blue-700"
                 }`}>
                   {session.role === "admin" ? "Administrator" : "Traveler"}
                 </span>

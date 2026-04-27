@@ -190,7 +190,7 @@ export default function AboutPage() {
           <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">
             Ready to Start Your Journey?
           </h2>
-          <p className="text-teal-100 mb-8 max-w-xl mx-auto">
+          <p className="text-blue-100 mb-8 max-w-xl mx-auto">
             Let our team of experts craft the perfect adventure for you. Your
             dream trip is just a conversation away.
           </p>
