@@ -122,7 +122,7 @@ export default function DestinationsPage() {
             {destinations.map((dest) => (
               <div
                 key={dest.name}
-                className="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 border border-gray-100"
+                className="group bg-white dark:bg-dark-card rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 dark:border-dark-border"
               >
                 <div className="relative h-64 overflow-hidden">
                   <Image
@@ -139,14 +139,14 @@ export default function DestinationsPage() {
                 </div>
                 <div className="p-6">
                   <div className="flex justify-between items-start mb-3">
-                    <h3 className="text-xl font-bold text-gray-900">{dest.name}</h3>
-                    <span className="text-lg font-bold text-primary">{dest.price}</span>
+                    <h3 className="text-xl font-bold text-gray-900 dark:text-white">{dest.name}</h3>
+                    <span className="text-lg font-bold text-primary dark:text-accent">{dest.price}</span>
                   </div>
-                  <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                  <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-4">
                     {dest.description}
                   </p>
                   <div className="flex items-center justify-between">
-                    <span className="text-sm text-gray-500 flex items-center gap-1">
+                    <span className="text-sm text-gray-500 dark:text-gray-400 flex items-center gap-1">
                       <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                       </svg>
@@ -154,7 +154,7 @@ export default function DestinationsPage() {
                     </span>
                     <Link
                       href="/contact"
-                      className="inline-flex items-center text-primary font-semibold text-sm hover:text-primary-dark transition-colors"
+                      className="inline-flex items-center text-primary dark:text-accent font-semibold text-sm hover:text-primary-dark dark:hover:text-accent-light transition-colors"
                     >
                       Book Now
                       <svg className="ml-1 w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">

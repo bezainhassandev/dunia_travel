@@ -21,7 +21,7 @@ export default function ForgotPasswordForm() {
       )}
 
       <div>
-        <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+        <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
           Email Address
         </label>
         <input
@@ -29,7 +29,7 @@ export default function ForgotPasswordForm() {
           name="email"
           type="email"
           placeholder="john@example.com"
-          className="w-full rounded-xl border border-gray-300 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-shadow"
+          className="w-full rounded-xl border border-gray-300 dark:border-slate-600 dark:bg-dark-surface dark:text-white px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-shadow"
         />
         {state?.errors?.email && (
           <p className="mt-1 text-sm text-red-600">{state.errors.email[0]}</p>

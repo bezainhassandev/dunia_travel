@@ -69,10 +69,10 @@ export default function ContactPage() {
             {/* Contact Info */}
             <div className="lg:col-span-2 space-y-8">
               <div>
-                <h2 className="text-2xl font-bold text-gray-900 mb-2">
+                <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
                   Get in Touch
                 </h2>
-                <p className="text-gray-600 leading-relaxed">
+                <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
                   Whether you&apos;re dreaming of a tropical beach holiday or an
                   adventurous mountain trek, our travel experts are here to help
                   you plan the perfect trip.
@@ -82,15 +82,15 @@ export default function ContactPage() {
               <div className="space-y-6">
                 {contactInfo.map((info) => (
                   <div key={info.title} className="flex gap-4">
-                    <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center">
+                    <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-primary/10 dark:bg-accent/10 text-primary dark:text-accent flex items-center justify-center">
                       {info.icon}
                     </div>
                     <div>
-                      <h3 className="font-semibold text-gray-900">
+                      <h3 className="font-semibold text-gray-900 dark:text-white">
                         {info.title}
                       </h3>
                       {info.details.map((detail) => (
-                        <p key={detail} className="text-sm text-gray-600">
+                        <p key={detail} className="text-sm text-gray-600 dark:text-gray-400">
                           {detail}
                         </p>
                       ))}
@@ -102,8 +102,8 @@ export default function ContactPage() {
 
             {/* Contact Form */}
             <div className="lg:col-span-3">
-              <div className="bg-white rounded-2xl shadow-lg p-8 sm:p-10 border border-gray-100">
-                <h2 className="text-xl font-bold text-gray-900 mb-6">
+              <div className="bg-white dark:bg-dark-card rounded-2xl shadow-lg p-8 sm:p-10 border border-gray-100 dark:border-dark-border">
+                <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-6">
                   Send Us a Message
                 </h2>
                 <form className="space-y-6">
@@ -111,7 +111,7 @@ export default function ContactPage() {
                     <div>
                       <label
                         htmlFor="firstName"
-                        className="block text-sm font-medium text-gray-700 mb-2"
+                        className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
                       >
                         First Name
                       </label>
@@ -119,14 +119,14 @@ export default function ContactPage() {
                         type="text"
                         id="firstName"
                         name="firstName"
-                        className="w-full rounded-xl border border-gray-300 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-shadow"
+                        className="w-full rounded-xl border border-gray-300 dark:border-slate-600 dark:bg-dark-surface dark:text-white px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-shadow"
                         placeholder="John"
                       />
                     </div>
                     <div>
                       <label
                         htmlFor="lastName"
-                        className="block text-sm font-medium text-gray-700 mb-2"
+                        className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
                       >
                         Last Name
                       </label>
@@ -134,7 +134,7 @@ export default function ContactPage() {
                         type="text"
                         id="lastName"
                         name="lastName"
-                        className="w-full rounded-xl border border-gray-300 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-shadow"
+                        className="w-full rounded-xl border border-gray-300 dark:border-slate-600 dark:bg-dark-surface dark:text-white px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-shadow"
                         placeholder="Doe"
                       />
                     </div>
@@ -142,7 +142,7 @@ export default function ContactPage() {
                   <div>
                     <label
                       htmlFor="email"
-                      className="block text-sm font-medium text-gray-700 mb-2"
+                      className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
                     >
                       Email
                     </label>
@@ -150,21 +150,21 @@ export default function ContactPage() {
                       type="email"
                       id="email"
                       name="email"
-                      className="w-full rounded-xl border border-gray-300 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-shadow"
+                      className="w-full rounded-xl border border-gray-300 dark:border-slate-600 dark:bg-dark-surface dark:text-white px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-shadow"
                       placeholder="john@example.com"
                     />
                   </div>
                   <div>
                     <label
                       htmlFor="destination"
-                      className="block text-sm font-medium text-gray-700 mb-2"
+                      className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
                     >
                       Dream Destination
                     </label>
                     <select
                       id="destination"
                       name="destination"
-                      className="w-full rounded-xl border border-gray-300 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-shadow bg-white"
+                      className="w-full rounded-xl border border-gray-300 dark:border-slate-600 dark:bg-dark-surface dark:text-white px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-shadow bg-white dark:bg-dark-surface"
                     >
                       <option value="">Select a destination</option>
                       <option value="santorini">Santorini, Greece</option>
@@ -180,7 +180,7 @@ export default function ContactPage() {
                   <div>
                     <label
                       htmlFor="message"
-                      className="block text-sm font-medium text-gray-700 mb-2"
+                      className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
                     >
                       Message
                     </label>
@@ -188,7 +188,7 @@ export default function ContactPage() {
                       id="message"
                       name="message"
                       rows={5}
-                      className="w-full rounded-xl border border-gray-300 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-shadow resize-none"
+                      className="w-full rounded-xl border border-gray-300 dark:border-slate-600 dark:bg-dark-surface dark:text-white px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-shadow resize-none"
                       placeholder="Tell us about your dream trip..."
                     />
                   </div>

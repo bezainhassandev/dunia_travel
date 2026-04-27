@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import ThemeProvider from "@/components/ThemeProvider";
 import { getSession } from "@/lib/session";
 import "./globals.css";
 
@@ -37,10 +38,12 @@ export default async function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">
-        <Navbar user={user} />
-        <main className="flex-1 pt-16">{children}</main>
-        <Footer />
+      <body className="min-h-full flex flex-col bg-background text-foreground transition-colors duration-300">
+        <ThemeProvider>
+          <Navbar user={user} />
+          <main className="flex-1 pt-16">{children}</main>
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );

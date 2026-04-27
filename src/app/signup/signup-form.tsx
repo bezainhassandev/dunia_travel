@@ -15,7 +15,7 @@ export default function SignupForm() {
       )}
 
       <div>
-        <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+        <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
           Full Name
         </label>
         <input
@@ -23,7 +23,7 @@ export default function SignupForm() {
           name="name"
           type="text"
           placeholder="John Doe"
-          className="w-full rounded-xl border border-gray-300 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-shadow"
+          className="w-full rounded-xl border border-gray-300 dark:border-slate-600 dark:bg-dark-surface dark:text-white px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-shadow"
         />
         {state?.errors?.name && (
           <p className="mt-1 text-sm text-red-600">{state.errors.name[0]}</p>
@@ -31,7 +31,7 @@ export default function SignupForm() {
       </div>
 
       <div>
-        <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+        <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
           Email
         </label>
         <input
@@ -39,7 +39,7 @@ export default function SignupForm() {
           name="email"
           type="email"
           placeholder="john@example.com"
-          className="w-full rounded-xl border border-gray-300 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-shadow"
+          className="w-full rounded-xl border border-gray-300 dark:border-slate-600 dark:bg-dark-surface dark:text-white px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-shadow"
         />
         {state?.errors?.email && (
           <p className="mt-1 text-sm text-red-600">{state.errors.email[0]}</p>
@@ -47,7 +47,7 @@ export default function SignupForm() {
       </div>
 
       <div>
-        <label htmlFor="password" className="block text-sm font-medium text-gray-700 mb-2">
+        <label htmlFor="password" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
           Password
         </label>
         <input
@@ -55,7 +55,7 @@ export default function SignupForm() {
           name="password"
           type="password"
           placeholder="Min 8 chars, 1 letter, 1 number"
-          className="w-full rounded-xl border border-gray-300 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-shadow"
+          className="w-full rounded-xl border border-gray-300 dark:border-slate-600 dark:bg-dark-surface dark:text-white px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-shadow"
         />
         {state?.errors?.password && (
           <div className="mt-1 text-sm text-red-600">

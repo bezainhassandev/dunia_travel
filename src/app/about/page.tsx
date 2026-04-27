@@ -81,13 +81,13 @@ export default function AboutPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
-              <p className="text-primary font-semibold text-sm uppercase tracking-widest mb-3">
+              <p className="text-primary dark:text-accent font-semibold text-sm uppercase tracking-widest mb-3">
                 Our Story
               </p>
-              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
+              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-6">
                 Born From a Love of Exploration
               </h2>
-              <div className="space-y-4 text-gray-600 leading-relaxed">
+              <div className="space-y-4 text-gray-600 dark:text-gray-400 leading-relaxed">
                 <p>
                   Wanderlust Travel was founded in 2010 with a simple mission: to
                   make extraordinary travel accessible to everyone. What started
@@ -121,13 +121,13 @@ export default function AboutPage() {
       </section>
 
       {/* Values */}
-      <section className="py-20 sm:py-28 bg-surface">
+      <section className="py-20 sm:py-28 bg-surface dark:bg-dark-surface">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <p className="text-primary font-semibold text-sm uppercase tracking-widest mb-3">
+            <p className="text-primary dark:text-accent font-semibold text-sm uppercase tracking-widest mb-3">
               Our Values
             </p>
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white">
               What We Stand For
             </h2>
           </div>
@@ -136,13 +136,13 @@ export default function AboutPage() {
             {values.map((value) => (
               <div
                 key={value.title}
-                className="bg-white rounded-2xl p-8 shadow-md text-center hover:shadow-xl transition-shadow"
+                className="bg-white dark:bg-dark-card rounded-2xl p-8 shadow-md text-center hover:shadow-xl transition-shadow"
               >
                 <div className="text-5xl mb-6">{value.icon}</div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
                   {value.title}
                 </h3>
-                <p className="text-gray-600 leading-relaxed">{value.description}</p>
+                <p className="text-gray-600 dark:text-gray-400 leading-relaxed">{value.description}</p>
               </div>
             ))}
           </div>
@@ -153,13 +153,13 @@ export default function AboutPage() {
       <section className="py-20 sm:py-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <p className="text-primary font-semibold text-sm uppercase tracking-widest mb-3">
+            <p className="text-primary dark:text-accent font-semibold text-sm uppercase tracking-widest mb-3">
               Our Team
             </p>
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white">
               Meet the Explorers
             </h2>
-            <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="mt-4 text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
               Our diverse team of travel enthusiasts brings years of expertise and
               a genuine passion for discovery.
             </p>
@@ -176,8 +176,8 @@ export default function AboutPage() {
                     className="object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
-                <h3 className="text-lg font-bold text-gray-900">{member.name}</h3>
-                <p className="text-sm text-primary font-medium">{member.role}</p>
+                <h3 className="text-lg font-bold text-gray-900 dark:text-white">{member.name}</h3>
+                <p className="text-sm text-primary dark:text-accent font-medium">{member.role}</p>
               </div>
             ))}
           </div>

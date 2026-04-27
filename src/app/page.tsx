@@ -133,16 +133,16 @@ export default function Home() {
       </section>
 
       {/* Featured Destinations */}
-      <section className="py-20 sm:py-28 bg-surface">
+      <section className="py-20 sm:py-28 bg-surface dark:bg-dark-surface">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <p className="text-primary font-semibold text-sm uppercase tracking-widest mb-3">
+            <p className="text-primary dark:text-accent font-semibold text-sm uppercase tracking-widest mb-3">
               Top Picks
             </p>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white">
               Featured Destinations
             </h2>
-            <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="mt-4 text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
               Explore our handpicked selection of the world&apos;s most extraordinary
               travel destinations.
             </p>
@@ -152,7 +152,7 @@ export default function Home() {
             {featuredDestinations.map((dest) => (
               <div
                 key={dest.name}
-                className="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
+                className="group bg-white dark:bg-dark-card rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
               >
                 <div className="relative h-64 overflow-hidden">
                   <Image
@@ -173,11 +173,11 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">{dest.name}</h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">{dest.description}</p>
+                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">{dest.name}</h3>
+                  <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">{dest.description}</p>
                   <Link
                     href="/destinations"
-                    className="inline-flex items-center mt-4 text-primary font-semibold text-sm hover:text-primary-dark transition-colors group/link"
+                    className="inline-flex items-center mt-4 text-primary dark:text-accent font-semibold text-sm hover:text-primary-dark dark:hover:text-accent-light transition-colors group/link"
                   >
                     View Details
                     <svg
@@ -197,7 +197,7 @@ export default function Home() {
           <div className="text-center mt-12">
             <Link
               href="/destinations"
-              className="inline-flex items-center rounded-full border-2 border-primary text-primary px-8 py-3 text-sm font-semibold hover:bg-primary hover:text-white transition-all"
+              className="inline-flex items-center rounded-full border-2 border-primary dark:border-accent text-primary dark:text-accent px-8 py-3 text-sm font-semibold hover:bg-primary hover:text-white dark:hover:bg-accent dark:hover:text-white transition-all"
             >
               View All Destinations
               <svg className="ml-2 w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -212,13 +212,13 @@ export default function Home() {
       <section className="py-20 sm:py-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <p className="text-primary font-semibold text-sm uppercase tracking-widest mb-3">
+            <p className="text-primary dark:text-accent font-semibold text-sm uppercase tracking-widest mb-3">
               Why Wanderlust
             </p>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white">
               Travel With Confidence
             </h2>
-            <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="mt-4 text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
               We go above and beyond to ensure every trip is seamless, safe, and
               unforgettable.
             </p>
@@ -228,10 +228,10 @@ export default function Home() {
             {features.map((feature) => (
               <div
                 key={feature.title}
-                className="text-center p-8 rounded-2xl bg-surface hover:bg-primary hover:text-white group transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
+                className="text-center p-8 rounded-2xl bg-surface dark:bg-dark-card hover:bg-primary hover:text-white group transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
               >
                 <div className="text-4xl mb-4">{feature.icon}</div>
-                <h3 className="text-lg font-bold mb-3 text-gray-900 group-hover:text-white transition-colors">
+                <h3 className="text-lg font-bold mb-3 text-gray-900 dark:text-white group-hover:text-white transition-colors">
                   {feature.title}
                 </h3>
                 <p className="text-sm text-gray-600 group-hover:text-blue-100 transition-colors leading-relaxed">
@@ -244,13 +244,13 @@ export default function Home() {
       </section>
 
       {/* Testimonials */}
-      <section className="py-20 sm:py-28 bg-surface">
+      <section className="py-20 sm:py-28 bg-surface dark:bg-dark-surface">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <p className="text-primary font-semibold text-sm uppercase tracking-widest mb-3">
+            <p className="text-primary dark:text-accent font-semibold text-sm uppercase tracking-widest mb-3">
               Testimonials
             </p>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white">
               What Travelers Say
             </h2>
           </div>
@@ -259,7 +259,7 @@ export default function Home() {
             {testimonials.map((testimonial) => (
               <div
                 key={testimonial.name}
-                className="bg-white rounded-2xl p-8 shadow-md hover:shadow-xl transition-shadow"
+                className="bg-white dark:bg-dark-card rounded-2xl p-8 shadow-md hover:shadow-xl transition-shadow"
               >
                 <div className="flex gap-1 mb-4">
                   {Array.from({ length: testimonial.rating }).map((_, i) => (
@@ -268,12 +268,12 @@ export default function Home() {
                     </span>
                   ))}
                 </div>
-                <p className="text-gray-700 leading-relaxed mb-6 italic">
+                <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-6 italic">
                   &ldquo;{testimonial.text}&rdquo;
                 </p>
                 <div>
-                  <p className="font-bold text-gray-900">{testimonial.name}</p>
-                  <p className="text-sm text-gray-500">{testimonial.location}</p>
+                  <p className="font-bold text-gray-900 dark:text-white">{testimonial.name}</p>
+                  <p className="text-sm text-gray-500 dark:text-gray-400">{testimonial.location}</p>
                 </div>
               </div>
             ))}
@@ -318,10 +318,10 @@ export default function Home() {
       {/* Newsletter */}
       <section className="py-16 sm:py-20">
         <div className="mx-auto max-w-3xl px-4 text-center">
-          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-4">
             Stay Inspired
           </h2>
-          <p className="text-gray-600 mb-8">
+          <p className="text-gray-600 dark:text-gray-400 mb-8">
             Subscribe to our newsletter for travel tips, exclusive deals, and
             destination inspiration delivered to your inbox.
           </p>
@@ -329,7 +329,7 @@ export default function Home() {
             <input
               type="email"
               placeholder="Enter your email"
-              className="flex-1 rounded-full border border-gray-300 px-6 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+              className="flex-1 rounded-full border border-gray-300 dark:border-slate-600 dark:bg-dark-card dark:text-white px-6 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
             />
             <button className="rounded-full bg-primary px-8 py-3 text-sm font-semibold text-white hover:bg-primary-dark transition-colors shadow-md">
               Subscribe

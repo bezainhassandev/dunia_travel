@@ -35,19 +35,19 @@ export default async function AdminPage() {
   }
 
   return (
-    <div className="min-h-[calc(100vh-4rem)] bg-surface py-12">
+    <div className="min-h-[calc(100vh-4rem)] bg-surface dark:bg-dark-surface py-12">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-8">
           <div>
-            <h1 className="text-3xl font-bold text-gray-900">Admin Dashboard</h1>
-            <p className="text-gray-600 mt-1">
+            <h1 className="text-3xl font-bold text-gray-900 dark:text-white">Admin Dashboard</h1>
+            <p className="text-gray-600 dark:text-gray-400 mt-1">
               Welcome back, {session.name}. Here&apos;s your overview.
             </p>
           </div>
           <Link
             href="/profile"
-            className="rounded-xl border border-gray-300 px-5 py-2.5 text-sm font-semibold text-gray-700 hover:bg-gray-50 transition-colors"
+            className="rounded-xl border border-gray-300 dark:border-slate-600 px-5 py-2.5 text-sm font-semibold text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-slate-700 transition-colors"
           >
             Back to Profile
           </Link>
@@ -58,7 +58,7 @@ export default async function AdminPage() {
           {dashboardStats.map((stat) => (
             <div
               key={stat.label}
-              className="bg-white rounded-2xl shadow-md p-6 border border-gray-100 hover:shadow-lg transition-shadow"
+              className="bg-white dark:bg-dark-card rounded-2xl shadow-md p-6 border border-gray-100 dark:border-dark-border hover:shadow-lg transition-shadow"
             >
               <div className="flex items-center justify-between mb-3">
                 <span className="text-2xl">{stat.icon}</span>
@@ -66,57 +66,57 @@ export default async function AdminPage() {
                   {stat.change}
                 </span>
               </div>
-              <p className="text-2xl font-bold text-gray-900">{stat.value}</p>
-              <p className="text-sm text-gray-600 mt-1">{stat.label}</p>
+              <p className="text-2xl font-bold text-gray-900 dark:text-white">{stat.value}</p>
+              <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">{stat.label}</p>
             </div>
           ))}
         </div>
 
         {/* Recent Bookings */}
-        <div className="bg-white rounded-2xl shadow-md border border-gray-100 overflow-hidden">
-          <div className="p-6 border-b border-gray-100">
-            <h2 className="text-lg font-bold text-gray-900">Recent Bookings</h2>
+        <div className="bg-white dark:bg-dark-card rounded-2xl shadow-md border border-gray-100 dark:border-dark-border overflow-hidden">
+          <div className="p-6 border-b border-gray-100 dark:border-dark-border">
+            <h2 className="text-lg font-bold text-gray-900 dark:text-white">Recent Bookings</h2>
           </div>
           <div className="overflow-x-auto">
             <table className="w-full">
               <thead>
-                <tr className="bg-gray-50 text-left">
-                  <th className="px-6 py-3 text-xs font-semibold text-gray-500 uppercase tracking-wider">
+                <tr className="bg-gray-50 dark:bg-slate-800 text-left">
+                  <th className="px-6 py-3 text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider">
                     Booking ID
                   </th>
-                  <th className="px-6 py-3 text-xs font-semibold text-gray-500 uppercase tracking-wider">
+                  <th className="px-6 py-3 text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider">
                     Customer
                   </th>
-                  <th className="px-6 py-3 text-xs font-semibold text-gray-500 uppercase tracking-wider">
+                  <th className="px-6 py-3 text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider">
                     Destination
                   </th>
-                  <th className="px-6 py-3 text-xs font-semibold text-gray-500 uppercase tracking-wider">
+                  <th className="px-6 py-3 text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider">
                     Date
                   </th>
-                  <th className="px-6 py-3 text-xs font-semibold text-gray-500 uppercase tracking-wider">
+                  <th className="px-6 py-3 text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider">
                     Amount
                   </th>
-                  <th className="px-6 py-3 text-xs font-semibold text-gray-500 uppercase tracking-wider">
+                  <th className="px-6 py-3 text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider">
                     Status
                   </th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-gray-100">
+              <tbody className="divide-y divide-gray-100 dark:divide-dark-border">
                 {recentBookings.map((booking) => (
-                  <tr key={booking.id} className="hover:bg-gray-50 transition-colors">
-                    <td className="px-6 py-4 text-sm font-medium text-gray-900">
+                  <tr key={booking.id} className="hover:bg-gray-50 dark:hover:bg-slate-800 transition-colors">
+                    <td className="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
                       {booking.id}
                     </td>
-                    <td className="px-6 py-4 text-sm text-gray-700">
+                    <td className="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
                       {booking.user}
                     </td>
-                    <td className="px-6 py-4 text-sm text-gray-700">
+                    <td className="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
                       {booking.destination}
                     </td>
-                    <td className="px-6 py-4 text-sm text-gray-500">
+                    <td className="px-6 py-4 text-sm text-gray-500 dark:text-gray-400">
                       {booking.date}
                     </td>
-                    <td className="px-6 py-4 text-sm font-medium text-gray-900">
+                    <td className="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
                       {booking.amount}
                     </td>
                     <td className="px-6 py-4">
@@ -141,30 +141,30 @@ export default async function AdminPage() {
 
         {/* Quick Management */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
-          <div className="bg-white rounded-2xl shadow-md p-6 border border-gray-100">
-            <h3 className="text-lg font-bold text-gray-900 mb-2">Manage Destinations</h3>
-            <p className="text-sm text-gray-600 mb-4">
+          <div className="bg-white dark:bg-dark-card rounded-2xl shadow-md p-6 border border-gray-100 dark:border-dark-border">
+            <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">Manage Destinations</h3>
+            <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
               Add, edit, or remove travel destinations from the catalog.
             </p>
             <Link
               href="/destinations"
-              className="inline-flex text-sm font-semibold text-primary hover:text-primary-dark transition-colors"
+              className="inline-flex text-sm font-semibold text-primary dark:text-accent hover:text-primary-dark dark:hover:text-accent-light transition-colors"
             >
               View Destinations →
             </Link>
           </div>
-          <div className="bg-white rounded-2xl shadow-md p-6 border border-gray-100">
-            <h3 className="text-lg font-bold text-gray-900 mb-2">User Management</h3>
-            <p className="text-sm text-gray-600 mb-4">
+          <div className="bg-white dark:bg-dark-card rounded-2xl shadow-md p-6 border border-gray-100 dark:border-dark-border">
+            <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">User Management</h3>
+            <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
               View and manage user accounts, roles, and permissions.
             </p>
             <span className="inline-flex text-sm font-semibold text-gray-400">
               Coming Soon
             </span>
           </div>
-          <div className="bg-white rounded-2xl shadow-md p-6 border border-gray-100">
-            <h3 className="text-lg font-bold text-gray-900 mb-2">Analytics</h3>
-            <p className="text-sm text-gray-600 mb-4">
+          <div className="bg-white dark:bg-dark-card rounded-2xl shadow-md p-6 border border-gray-100 dark:border-dark-border">
+            <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">Analytics</h3>
+            <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
               View booking trends, revenue reports, and user insights.
             </p>
             <span className="inline-flex text-sm font-semibold text-gray-400">
