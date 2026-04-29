@@ -38,6 +38,12 @@ export async function findUserByEmail(email: string): Promise<User | undefined> 
   return users.get(email);
 }
 
+export async function getAllUsers(): Promise<Omit<User, "password">[]> {
+  await seedDemoUsers();
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  return Array.from(users.values()).map(({ password, ...rest }) => rest);
+}
+
 export async function createUser(
   name: string,
   email: string,
